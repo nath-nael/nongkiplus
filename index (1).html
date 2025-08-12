@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style_map.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <!-- Add Leaflet CSS and JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      defer
+    ></script>
+
+    <!-- Add Leaflet Routing Machine CSS and JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"
+      defer
+    ></script>
+    <!-- Leaflet Control Geocoder Plugin -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script defer src="other copy.js"></script>
+    <!-- <script defer src="script.js"></script> -->
+    <title>Nongki</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1><a href="index.html">Nongki.</a></h1>
+    </div>
+    <div class="sidebar">
+      <button class="reset__button">Reset Map</button>
+      <div class="step form">
+        <label class="form__label">Step 1: Click the map to get your position</label class="form__label">
+        </div>
+
+      <div class="step form">
+        <label class="form__label">Step 2: Click the map where your friend is</label class="form__label">
+      </div>
+
+      <form class="form">
+        <div class="form__row">
+          <label class="form__label_[]">Type</label>
+          <select class="form__input form__input--type">
+            <option value="restaurant">Restaurant</option>
+            <option value="mall">Mall</option>
+            <option value="cafe">Cafe</option>
+            <option value="hotel">Hotel</option>
+          </select>
+        </div>
+      </form>
+      <div class="form">
+        <div class="form__label_p">Preferences</div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Type your message here..."
+          />
+          <button id="sendButton" class="send__button" type="submit">Send</button>
+          <!-- <div class="place_recommend" id="mapsLink"></div> -->
+        </div>
+      </div>
+      <!-- Add this inside the .sidebar, after "Preferences" -->
+      <div class="mapslink"id="mapsLink"></div>
+      <div class="form">
+        <div class="form__label_p" id="placesContainer">Place Recommendation
+          <div class="places__content" id="placesList">No places available</div>
+        </div>
+
+      </div>
+      <!-- <iframe
+      class="maps"
+          id="mapsFrame"
+          width="100%"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe> -->
+    </div>
+    
+    <div id="map"></div>
+    
+
+    <div class="sidebar2">
+      <!-- <a href="map.html"> -->
+        <a>
+        <i class="fas fa-map icon shiny-icon"></i>
+      </a>
+      <!-- <a href="index.html"> -->
+        <a>
+        <i class="fas fa-home icon"></i>
+      </a>
+      <!-- <a href="friend.html"> -->
+        <a>
+        <i class="fas fa-users icon"></i>
+      </a>
+      <!-- <a href="help.html"> -->
+        <a>
+        <i class="fas fa-question-circle icon"></i>
+      </a>
+    </div>
+    <script src="gpt.js"></script>
+    <!-- <script src="show.js"></script> -->
+  </body>
+</html>

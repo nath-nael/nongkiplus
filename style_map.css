@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1a6432;
+  color: white;
+  /* text-align: left; */
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  h1 {
+    margin-left: 20px;
+  }
+}
+
+.header a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Sidebar2 (Navigation Menu) */
+.sidebar2 {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 70px;
+  height: calc(100vh - 60px);
+  background-color: #063414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 30px;
+}
+
+.sidebar2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Sidebar (Steps, Type, Preferences) */
+.sidebar {
+  position: fixed;
+  left: 70px;
+  top: 60px;
+  width: 300px;
+  height: calc(100vh - 60px);
+  background-color: #0d4920;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  color: white;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+.sidebar::-webkit-scrollbar {
+  width: 8px; /* Adjust width if needed */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* Light scrollbar */
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Form */
+.form {
+  background-color: #1a6432;
+  border-radius: 5px;
+  padding: 7px 7px 7px 8px;
+  margin-bottom: 10px;
+
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 0.5rem 2.5rem;
+
+  /* Match height and activity boxes */
+  height: auto;
+  transition: all 0.5s, transform 1ms;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  flex: 0 0 50%;
+  font-size: 15px;
+  font-weight: 50;
+  color: white;
+}
+
+.form__input {
+  width: 100%;
+  padding-left: 1vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  font-family: inherit;
+  font-size: 15 px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all 0.2s;
+}
+
+.form__input:focus {
+  outline: none;
+  /* background-color: #fff; */
+}
+
+.form__btn {
+  display: none;
+}
+.reset__button {
+  background-color: #649026;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.send__button {
+  background-color: #86c232;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form__label_p {
+  flex: 0 0 50%;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.chat-messages {
+  word-wrap: break-word;
+  line-height: 1.8; /* Adjust line spacing */
+  margin-bottom: 10px; /* Adds space after each line */
+}
+
+.chat-messages div {
+  /* padding-bottom: 10px; */
+  border-bottom: 1px solid #dddddd85; /* Light gray line */
+}
+
+.chat-messages div:last-child {
+  border-bottom: none; /* Remove line from the last item */
+}
+
+/* Map */
+
+.places {
+  position: absolute;
+  bottom: 10%;
+  left: 20px; /* Move it to the left */
+  right: auto; /* Ensure right is unset */
+  width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #dbffa9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000; /* Ensure it's above the map */
+  opacity: 0;
+  transform: translateX(-100%); /* Start hidden on the left */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.mapslink {
+  text-decoration: none;
+  color: rgb(255, 221, 85);
+  /* background-color: white; */
+}
+.mapslink:hover {
+  scale: 1.1;
+}
+
+.places.visible {
+  opacity: 1;
+  transform: translateX(0); /* Slide in when visible */
+}
+
+/* .places__close {
+  background: rgb(255, 242, 0);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 5px;
+  max-height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 20;
+} */
+
+.places__content {
+  background-color: #1a6432; /* Match other form sections */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 50;
+  color: white;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 1.8; /* Adjust line spacing */
+  margin-bottom: 10px; /* Adds space after each line */
+}
+
+.places__content div {
+  /* padding-bottom: 10px; */
+  border-bottom: 1px solid #dddddd85; /* Light gray line */
+}
+
+.places__content div:last-child {
+  border-bottom: none; /* Remove line from the last item */
+}
+
+/* Button on the left with 'places' icon */
+.places__toggle-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px; /* Move the button to the left */
+  background-color: rgb(46, 124, 10);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+/* Place Recommendation Section */
+.place_recommend {
+  background-color: #1a6432; /* Match other form sections */
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#map {
+  position: fixed;
+  top: 60px;
+  left: 370px;
+  width: calc(100vw - 370px);
+  height: calc(100vh - 60px);
+}
+
+/* Place Recommendation Links */
+.place_recommend a {
+  color: #dbffa9; /* Highlighted link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.place_recommend a:hover {
+  text-decoration: underline;
+}
