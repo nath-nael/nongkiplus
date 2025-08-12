@@ -1,5 +1,5 @@
 const apiKey =
-  "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";
+  "xxxxx";
 const userInput = document.getElementById("userInput");
 const chatMessages = document.getElementById("chatMessages");
 const sendButton = document.getElementById("sendButton");
@@ -96,3 +96,4 @@ sendButton.addEventListener("click", async () => {
 userInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") sendButton.click();
 });
+
