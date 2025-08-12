@@ -1,4 +1,4 @@
-# 🗺️ NongkiPlus : LLM-Powered Map=Based Recommender System
+# 🗺️ NongkiPlus : LLM-Powered Map-Based Recommender System
 
 ## Overview
 NongkiPlus is a location-based web application that helps people find the perfect midpoint for meetups.  
@@ -60,4 +60,6 @@ NongkiPlus was tested and analyzed based on:
 - Expand dataset for global coverage.
 
 ---
+## Try it : 
+- [Nongkiplus](https://nongkiplus.netlify.app/)
 
