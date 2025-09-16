@@ -21,11 +21,11 @@ It also includes comparative analysis across **generations** (Gen Alpha, Gen Z, 
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Map & Geolocation**: [Leaflet.js](https://leafletjs.com/)
-- **Routing & Midpoint Calculation**: Leaflet Routing Machine
-- **AI Recommendation**: OpenAI API (ChatGPT)
-- **Data Sources**: Mall and restaurant datasets for Indonesia
+- **Frontend**: HTML, CSS, JavaScript.
+- **Map & Geolocation**: [Leaflet.js](https://leafletjs.com/).
+- **Routing & Midpoint Calculation**: Leaflet Routing Machine.
+- **AI Recommendation**: OpenAI API (ChatGPT).
+- **Data Sources**: Mall and restaurant datasets for Indonesia.
 
 ---
 
